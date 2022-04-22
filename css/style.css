@@ -1,0 +1,70 @@
+/************************************** DESKTOP VIEW ****************************************/
+body{
+    font-family: arial, serif;
+    color: #333;
+}
+h1{
+    font-weight: normal;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 2.5em;
+}
+form{
+    width: 500px;
+    margin: 20px auto;
+}
+input{
+    display: block;
+    padding: 8px 16px;
+    font-size: 2em;
+    margin: 10px auto;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    outline: none !important;
+}
+button{
+    padding:8px 16px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: 3px solid black;
+
+}
+button:hover{
+    background-color: #ccc;
+    border-color:darkcyan;
+}
+button:last-child:active{
+    transform:translateY(7px);
+}
+button:active{
+    background-color: darkcyan;
+    border-color:black;
+}
+p{
+    font-family: arial, serif;
+    font-size:0.9em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px auto;
+    color:orange;
+    opacity: 0;
+    height: 0;
+}
+/************************************** MOBILE VIEW *****************************************/
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 2em;
+    }
+    form{
+        width:auto;
+        padding:0 10px;
+    }
+    input{
+        font-size: 1.5em;
+    }
+    p{
+        font-size:0.8em;
+    }
+}
