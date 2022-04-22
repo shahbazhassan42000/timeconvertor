@@ -1,3 +1,15 @@
+/*Remove Arrows/Spinners*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 /************************************** DESKTOP VIEW ****************************************/
 body{
     font-family: arial, serif;
@@ -12,8 +24,9 @@ h1{
 form{
     width: 500px;
     margin: 20px auto;
+    text-align: center;
 }
-input{
+.user_input{
     display: block;
     padding: 8px 16px;
     font-size: 2em;
@@ -23,13 +36,20 @@ input{
     border: 3px solid #ccc;
     outline: none !important;
 }
+select{
+    font-size: 2em;
+    color: #757575;
+    border-radius: 10px;
+    border: 3px solid #ccc;
+    outline: none !important;
+    padding: 0 8px;
+}
 button{
-    padding:8px 16px;
+    padding:16px 20px;
     display: block;
     margin: 10px auto;
     border-radius: 10px;
     border: 3px solid black;
-
 }
 button:hover{
     background-color: #ccc;
@@ -42,15 +62,20 @@ button:active{
     background-color: darkcyan;
     border-color:black;
 }
-p{
+.msg{
     font-family: arial, serif;
     font-size:0.9em;
     font-weight: bold;
     text-align: center;
-    margin: 0px auto;
+    margin: 0 auto;
     color:orange;
     opacity: 0;
     height: 0;
+}
+.formatted_time{
+    display: none;
+    font-weight: bold;
+    width: 500px;
 }
 /************************************** MOBILE VIEW *****************************************/
 @media only screen and (max-width: 600px){
@@ -61,10 +86,16 @@ p{
         width:auto;
         padding:0 10px;
     }
-    input{
+    .user_input,.formatted_time{
         font-size: 1.5em;
     }
-    p{
+    .msg{
         font-size:0.8em;
     }
+    .formatted_time{
+        width:auto;
+        margin:0 10px;
+    }
+
+
 }

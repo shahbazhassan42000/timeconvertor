@@ -11,15 +11,19 @@
 </head>
 <body>
 <h1>Time Convertor</h1>
-<form>
-    <input type="number" placeholder="HOUR" name="hour">
+<form name="time_form">
+    <input class="user_input" type="number" placeholder="HOUR" name="hour" min="1" max="12" required>
     <p class="msg">Hours must be in between 1 and 12.</p>
-    <input type="number" name="minutes" placeholder="MINUTES">
-    <p class="msg">Minutes must be in between 0 and 60.</p>
-    <input type="number" name="seconds" placeholder="SECONDS">
-    <p class="msg">Seconds must be in between 0 and 60.</p>
+    <input class="user_input" type="number" name="minutes" placeholder="MINUTES" min="0" max="59" required>
+    <p class="msg">Minutes must be in between 0 and 59.</p>
+    <input class="user_input" type="number" name="seconds" placeholder="SECONDS" min="0" max="59" required>
+    <p class="msg">Seconds must be in between 0 and 59.</p>
+    <select name="time" required>
+        <option value="AM" selected>AM</option>
+        <option value="PM">PM</option>
+    </select>
     <button type="submit">CONVERT</button>
 </form>
-
+<h1 class="user_input formatted_time" id="formatted_time"></h1>
 </body>
 </html>
