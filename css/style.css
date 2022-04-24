@@ -14,12 +14,19 @@ input[type=number] {
 body{
     font-family: arial, serif;
     color: #333;
+    background: url("../images/time.jpg") no-repeat;
+    background-size: cover;
 }
-h1{
-    font-weight: normal;
+h1,#title{
+    font-weight: bolder;
     margin: 20px auto;
     text-align: center;
     font-size: 2.5em;
+}
+#title{
+    font-family: 'Little Lord Fontleroy NF', sans-serif;
+    font-weight: bolder;
+    font-size: 4.5em;
 }
 form{
     width: 500px;
@@ -27,6 +34,7 @@ form{
     text-align: center;
 }
 .user_input{
+    background-color: whitesmoke;
     display: block;
     padding: 8px 16px;
     font-size: 2em;
@@ -49,18 +57,16 @@ button{
     display: block;
     margin: 10px auto;
     border-radius: 10px;
-    border: 3px solid black;
+    border: 3px solid #333333;
+    background-color: #F7B9B8;
+    font-weight: bolder;
+    font-family: Poppins, sans-serif;
 }
 button:hover{
-    background-color: #ccc;
-    border-color:darkcyan;
-}
-button:last-child:active{
-    transform:translateY(7px);
+    background-color: #B9E0DD;
 }
 button:active{
-    background-color: darkcyan;
-    border-color:black;
+    transform:translateY(7px);
 }
 .msg{
     font-family: arial, serif;
@@ -76,9 +82,15 @@ button:active{
     display: none;
     font-weight: bold;
     width: 500px;
+    background-color: whitesmoke;
+    border-color: #333333;
 }
 /************************************** MOBILE VIEW *****************************************/
 @media only screen and (max-width: 600px){
+    body{
+        background: url("../images/time_mobile.jpg") no-repeat;
+        background-size: cover;
+    }
     h1{
         font-size: 2em;
     }
